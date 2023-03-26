@@ -1,20 +1,25 @@
 import React from 'react';
 import './App.css';
 
+import useBreakpoints from './hooks/useBreakpoints';
 import Card from './components/Card';
 
 function App() {
+
+  const { currentBreakpoint } = useBreakpoints()
+
   return (
     <div className="flex flex-col gap-4 py-8">
       <div className='flex flex-col gap-4 w-[70rem] mx-auto max-w-[95%]'>
         <h1 className='font-bold text-4xl text-center'>Valkyrie List</h1>
-        <div className='flex justify-around flex-wrap gap-2 gap-y-6'>
+        <div className='flex justify-around flex-wrap gap-4 gap-y-6'>
           <Card
             title='Herrscher of Reason'
             description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, distinctio!'
             onEdit={() => console.log("Edit Card")}
             onDelete={() => console.log("Delete Card")}
             type="MEC"
+            minimized={currentBreakpoint === "sm"}
           />
           <Card
             title='Herrscher of Thunder'
@@ -22,6 +27,7 @@ function App() {
             onEdit={() => console.log("Edit Card")}
             onDelete={() => console.log("Delete Card")}
             type="PSY"
+            minimized={currentBreakpoint === "sm"}
           />
           <Card
             title='Herrscher of Sentience'
@@ -29,6 +35,7 @@ function App() {
             onEdit={() => console.log("Edit Card")}
             onDelete={() => console.log("Delete Card")}
             type="BIO"
+            minimized={currentBreakpoint === "sm"}
           />
           <Card
             title='Stygan Nymph'
@@ -36,6 +43,7 @@ function App() {
             onEdit={() => console.log("Edit Card")}
             onDelete={() => console.log("Delete Card")}
             type="QUA"
+            minimized={currentBreakpoint === "sm"}
           />
           <Card
             title='Herrscher of Finality'
@@ -43,6 +51,7 @@ function App() {
             onEdit={() => console.log("Edit Card")}
             onDelete={() => console.log("Delete Card")}
             type="IMG"
+            minimized={currentBreakpoint === "sm"}
           />
         </div>
       </div>

@@ -1,24 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import Card from './components/Card';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col gap-4 py-8">
+      <div className='flex flex-col gap-4 w-[70rem] mx-auto max-w-[95%]'>
+        <h1 className='font-bold text-4xl text-center'>Valkyrie List</h1>
+        <div className='flex justify-around flex-wrap gap-2 gap-y-6'>
+          <Card
+            title='Herrscher of Reason'
+            description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, distinctio!'
+            onEdit={() => console.log("Edit Card")}
+            onDelete={() => console.log("Delete Card")}
+            type="MEC"
+          />
+          <Card
+            title='Herrscher of Thunder'
+            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint sequi atque corrupti sed nam omnis soluta, velit perferendis harum.'
+            onEdit={() => console.log("Edit Card")}
+            onDelete={() => console.log("Delete Card")}
+            type="PSY"
+          />
+          <Card
+            title='Herrscher of Sentience'
+            description='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error aut porro beatae facere maxime, voluptas est ipsum? Repellat tempore amet, magnam vero laudantium dolores impedit tenetur placeat ipsa numquam eveniet!'
+            onEdit={() => console.log("Edit Card")}
+            onDelete={() => console.log("Delete Card")}
+            type="BIO"
+          />
+          <Card
+            title='Stygan Nymph'
+            description='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis harum, ipsa dolorem ab, distinctio amet, rem tempore vel facilis eum numquam id incidunt. Laudantium commodi, qui dolore ipsa molestias, consequuntur reiciendis obcaecati iusto reprehenderit ipsum omnis eligendi possimus est laborum?'
+            onEdit={() => console.log("Edit Card")}
+            onDelete={() => console.log("Delete Card")}
+            type="QUA"
+          />
+          <Card
+            title='Herrscher of Finality'
+            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam natus unde quia magnam fugiat adipisci cum. Nesciunt alias, aut architecto accusantium quasi sequi, quam inventore eos veniam quo aliquid, adipisci hic nihil. Sunt, veritatis! Iusto atque quae, labore saepe a sapiente doloremque, enim, nulla consequuntur vero aut possimus quas doloribus.'
+            onEdit={() => console.log("Edit Card")}
+            onDelete={() => console.log("Delete Card")}
+            type="IMG"
+          />
+        </div>
+      </div>
     </div>
   );
 }

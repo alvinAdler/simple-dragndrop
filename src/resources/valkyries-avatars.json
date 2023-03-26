@@ -1,0 +1,154 @@
+{
+  "HoHE": {
+      "url": "https://webstatic.hoyoverse.com/upload/contentweb/2022/09/14/cc0cb3d0a9f5826ea4f3b065bdae48c7_7406996032602669838.png",
+      "type": "PSY"
+  },
+  "MPE": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210916/2021091612101254675.png",
+      "type": "PSY"
+  },
+  "SWN": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20220113/2022011317562054920.png",
+      "type": "BIO"
+  },
+  "HoR": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200622/2020062215475329017.png",
+      "type": "MEC"
+  },
+  "HoT": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200806/2020080615421783866.png",
+      "type": "PSY"
+  },
+  "BladeStrike": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200623/2020062314264532543.png",
+      "type": "BIO"
+  },
+  "HoF": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210811/2021081119164390837.png",
+      "type": "PSY"
+  },
+  "HoV": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200618/2020061821060743679.png",
+      "type": "BIO"
+  },
+  "JK": {
+      "url": "https://webstatic.hoyoverse.com/upload/contentweb/2022/10/26/6b3283836108265135b46cb244ecb0a9_1320977919751818563.png",
+      "type": "PSY"
+  },
+  "HC": {
+      "url": "https://webstatic.hoyoverse.com/upload/contentweb/2022/08/11/6ecfebefc6a22b0e796f2f190e5915f1_1007850639120664816.png",
+      "type": "QUA"
+  },
+  "SI": {
+      "url": "https://webstatic.hoyoverse.com/upload/contentweb/2022/06/29/e00a7cc0f0f1e104a8349a80a89761f8_7697415012192657967.png",
+      "type": "PSY"
+  },
+  "DC": {
+      "url": "https://webstatic.hoyoverse.com/upload/contentweb/2022/05/18/e61c93c3bd19be99ca28d7edb96defe6_2294047769551385143.png",
+      "type": "BIO"
+  },
+  "Eden": {
+      "url": "https://webstatic.hoyoverse.com/upload/contentweb/2022/05/18/35fdf831bc3473f0c5175bfe7afef44d_5219471322825998118.png",
+      "type": "IMG"
+  },
+  "RC": {
+      "url": "https://webstatic.hoyoverse.com/upload/contentweb/2022/04/07/b904f8bab2abaed4242a497e1b2a9885_7448349827127326298.png",
+      "type": "IMG"
+  },
+  "Carole": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20211202/2021120216451897978.png",
+      "type": "MEC"
+  },
+  "MA": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20211022/2021102216342273847.png",
+      "type": "IMG"
+  },
+  "Mobius": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20211022/2021102215154524706.png",
+      "type": "MEC"
+  },
+  "Fischl": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210707/2021070719404558609.png",
+      "type": "BIO"
+  },
+  "VKE": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200618/2020061819191024658.png",
+      "type": "MEC"
+  },
+  "IceSakura": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200701/2020070117331454724.png",
+      "type": "MEC"
+  },
+  "LK": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200721/2020072117313038916.png",
+      "type": "BIO"
+  },
+  "TP": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200721/2020072117425786448.png",
+      "type": "MEC"
+  },
+  "HoS": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210303/2021030314311783164.png",
+      "type": "BIO"
+  },
+  "RI": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200615/2020061520505637447.png",
+      "type": "MEC"
+  },
+  "SPA": {
+      "url": "https://webstatic.hoyoverse.com/upload/contentweb/2022/02/23/cb25532782e9dd86e1e0d40ff4bd7a2e_5333117911020780397.png",
+      "type": "MEC"
+  },
+  "FR": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200915/2020091513440064490.png",
+      "type": "QUA"
+  },
+  "AKA": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200720/2020072018343435710.png",
+      "type": "BIO"
+  },
+  "VLNA": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210527/2021052719022291248.png",
+      "type": "QUA"
+  },
+  "SN": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200702/2020070214392920960.png",
+      "type": "QUA"
+  },
+  "DELTA": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20201029/2020102914412142637.png",
+      "type": "PSY"
+  },
+  "PE": {
+      "url": "https://webstatic.hoyoverse.com/upload/contentweb/2022/02/24/ecf1c59afcb7ed4033cd0690134ae924_1366100562159084965.png",
+      "type": "IMG"
+  },
+  "DA": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20201216/2020121616445918580.png",
+      "type": "BIO"
+  },
+  "VG": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200611/2020061116521721707.png",
+      "type": "QUA"
+  },
+  "BKE": {
+      "url": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200702/2020070214380348555.png",
+      "type": "MEC"
+  },
+  "CN": {
+      "url": "https://webstatic.hoyoverse.com/upload/contentweb/2022/12/07/86bfbbf5c7898fa06c25c90308c4de1d_5067426831528689837.png",
+      "type": "MEC"
+  },
+  "HoTr": {
+      "url": "https://webstatic.hoyoverse.com/upload/contentweb/2023/01/09/dbb168138fe42a86abbad08093120186_4592962777990546362.png",
+      "type": "IMG"
+  },
+  "HoRi": {
+      "url": "https://webstatic.hoyoverse.com/upload/contentweb/2023/02/14/07c717c930aecc641bade643d7d862e8_778916622470670575.png",
+      "type": "MEC"
+  },
+  "HoFi": {
+      "url": "https://webstatic.hoyoverse.com/upload/contentweb/2023/02/13/625700e827bb334b0b01807ef523cb41_7769560738302344880.png",
+      "type": "IMG"
+  }
+}

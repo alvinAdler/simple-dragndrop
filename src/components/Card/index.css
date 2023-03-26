@@ -1,0 +1,7 @@
+h2{
+  --first-shadow: 0.05em;
+  --second-shadow: 0.1em;
+  text-shadow: var(--first-shadow) var(--first-shadow) 0 white,
+  var(--second-shadow) var(--second-shadow) 0 currentColor
+  ;
+}

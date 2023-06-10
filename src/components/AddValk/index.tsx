@@ -11,9 +11,9 @@ const AddValk = () => {
 
   return (
     <>
-      <Button type='primary' className='mx-auto mt-2 flex items-center gap-2' onClick={() => setIsModalVisible(true)}><FaPlus/>Add new valk!</Button>
+      <Button type="button" buttonType='primary' className='mx-auto mt-2 flex items-center gap-2' onClick={() => setIsModalVisible(true)}><FaPlus/>Add new valk!</Button>
       <BaseModal isVisible={isModalVisible} onClose={() => setIsModalVisible(false)}>
-        <AddModal action='add'/>
+        <AddModal action='add' onClose={() => setIsModalVisible(false)}/>
       </BaseModal>
     </>
   )

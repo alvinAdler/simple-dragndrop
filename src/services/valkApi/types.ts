@@ -1,8 +1,11 @@
+export type ValkType = "MEC" | "PSY" | "BIO" | "IMG" | "QUA"
+export const VALKTYPES: ValkType[] = ["MEC", "PSY", "BIO" , "IMG", "QUA"]
+
 export interface Valkyrie {
   imageUrl: string;
   title:    string;
   desc:     string;
-  type:     "MEC" | "PSY" | "BIO" | "IMG" | "QUA";
+  type:     ValkType;
   id: string;
 }
 

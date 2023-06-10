@@ -1,14 +1,14 @@
 import React from 'react'
 
-interface ButtonProps extends React.HTMLProps<HTMLButtonElement>{
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
   children: React.ReactNode,
-  type: "primary" | "danger" | "warning" | "success"
+  buttonType: "primary" | "danger" | "warning" | "success"
 }
 
-const Button: React.FC<ButtonProps> = ({ children, type, className, ...rest }) => {
+const Button: React.FC<ButtonProps> = ({ children, buttonType, className, ...rest }) => {
 
   const conditionalStyles = (() => {
-    switch(type){
+    switch(buttonType){
       case 'primary':
         return "bg-cyan-500 focus:outline-cyan-500 focus:bg-cyan-400 hover:bg-cyan-400 transition ease-in"
       case 'success':

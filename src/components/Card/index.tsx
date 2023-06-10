@@ -87,8 +87,8 @@ const Card: React.FC<CardProps> = ({ valk, minimizedSettings, edit }) => {
       }
       {edit?.isEditable &&
         <div className='flex gap-2 justify-around p-2 mt-4 items-center flex-wrap'>
-          <Button type='primary' className='flex-1' onClick={() => edit?.onEdit()}>Edit</Button>
-          <Button type='danger' className='flex-1' onClick={() => edit?.onDelete()}>Delete</Button>
+          <Button buttonType='primary' className='flex-1' onClick={() => edit?.onEdit()}>Edit</Button>
+          <Button buttonType='danger' className='flex-1' onClick={() => edit?.onDelete()}>Delete</Button>
         </div>
       }
     </div>

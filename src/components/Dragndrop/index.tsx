@@ -29,10 +29,10 @@ const Dragndrop: React.FC<DragndropProps> = ({ list, onMinimizedCardClick}) => {
   return (
     <div>
       <div className='items-center justify-end flex flex-wrap gap-2 mb-2'>
-        <Button type='primary' onClick={() => setIsRowEditable((prevState) => !prevState)}>
+        <Button buttonType='primary' onClick={() => setIsRowEditable((prevState) => !prevState)}>
           <FaEdit/>
         </Button>
-        <Button type="danger">
+        <Button buttonType="danger">
           <FaTrash/>
         </Button>
       </div>

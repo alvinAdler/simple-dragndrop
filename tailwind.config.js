@@ -9,6 +9,9 @@ module.exports = {
         "psy": "#de76d5",
         "qua": "#7965ff",
         "img": "#d1bc94",
+      },
+      zIndex: {
+        "behind": "-1"
       }
     },
   },

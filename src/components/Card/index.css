@@ -1,4 +1,4 @@
-h2{
+.card-title{
   --first-shadow: 0.05em;
   --second-shadow: 0.1em;
   text-shadow: var(--first-shadow) var(--first-shadow) 0 white,

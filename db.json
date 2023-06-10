@@ -1,0 +1,56 @@
+{
+  "list": [
+    {
+      "id": "SAMPLEID1",
+      "list": [
+        {
+          "imageUrl": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200622/2020062215475329017.png",
+          "title": "Herrscher of Reason",
+          "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, distinctio!",
+          "type": "MEC",
+          "id": "UNIQUEID1"
+        },
+        {
+          "imageUrl": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20200806/2020080615421783866.png",
+          "title": "Herrscher of Thunder",
+          "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, distinctio!",
+          "type": "PSY",
+          "id": "UNIQUEID2"
+        },
+        {
+          "imageUrl": "https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210811/2021081119164390837.png",
+          "title": "Herrscher of Flamescion",
+          "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, distinctio!",
+          "type": "PSY",
+          "id": "UNIQUEID3"
+        }
+      ]
+    },
+    {
+      "id": "SAMPLEID2",
+      "list": [
+        {
+          "imageUrl": "https://webstatic.hoyoverse.com/upload/contentweb/2023/02/13/625700e827bb334b0b01807ef523cb41_7769560738302344880.png",
+          "title": "Herrscher of Finality",
+          "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, distinctio!",
+          "type": "IMG",
+          "id": "UNIQUE4"
+        },
+        {
+          "imageUrl": "https://webstatic.hoyoverse.com/upload/contentweb/2023/02/14/07c717c930aecc641bade643d7d862e8_778916622470670575.png",
+          "title": "Herrscher of Origin",
+          "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, distinctio!",
+          "type": "IMG",
+          "id": "UNIQUE5"
+        },
+        {
+          "imageUrl": "https://webstatic.hoyoverse.com/upload/contentweb/2023/01/09/dbb168138fe42a86abbad08093120186_4592962777990546362.png",
+          "title": "Herrscher of Truth",
+          "desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, distinctio!",
+          "type": "IMG",
+          "id": "UNIQUE6"
+        }
+      ]
+    }
+  ]
+}

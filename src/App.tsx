@@ -1,61 +1,88 @@
-import React from 'react';
+import { useCallback, useState, useMemo, createContext } from 'react';
 import './App.css';
 
-import useBreakpoints from './hooks/useBreakpoints';
+import useBreakpoints, { Breakpoints } from './hooks/useBreakpoints';
+import { useGetValksQuery } from './services/valkApi';
+import { Valkyrie } from './services/valkApi/types';
+
 import Card from './components/Card';
+import BaseModal from './components/Modal';
+import BaseTemplate from './components/BaseTemplate';
+import Dragndrop from './components/Dragndrop';
+import RenderWrapper from './components/RenderWrapper';
+import AddValk from './components/AddValk';
+
+interface AppContextProps{
+  currentBreakpoint?: Breakpoints,
+}
+
+export const AppContext = createContext<AppContextProps>({})
 
 function App() {
 
   const { currentBreakpoint } = useBreakpoints()
 
+  const { data: valks, isLoading, isError } = useGetValksQuery(undefined)
+  const [isCardDetailModalVisible, setIsCardDetailModalVisible] = useState(false)
+  const [highlightedValkId, setHighlightedValkId] = useState<string | null>(null)
+
+  const highlightedValk = useMemo(() => {
+    if(!valks) return undefined
+
+    for(let valkRow of valks){
+      for(let valk of valkRow){
+        if(valk.id === highlightedValkId){
+          return valk
+        }
+      }
+    }
+
+    return undefined
+  }, [valks, highlightedValkId])
+
+  const onMinimizedCardClick = useCallback((valk: Valkyrie) => {
+    setIsCardDetailModalVisible(true)
+    setHighlightedValkId(valk.id)
+  }, [])
+
   return (
-    <div className="flex flex-col gap-4 py-8">
-      <div className='flex flex-col gap-4 w-[70rem] mx-auto max-w-[95%]'>
-        <h1 className='font-bold text-4xl text-center'>Valkyrie List</h1>
-        <div className='flex justify-around flex-wrap gap-4 gap-y-6'>
-          <Card
-            title='Herrscher of Reason'
-            description='Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, distinctio!'
-            onEdit={() => console.log("Edit Card")}
-            onDelete={() => console.log("Delete Card")}
-            type="MEC"
-            minimized={currentBreakpoint === "sm"}
-          />
-          <Card
-            title='Herrscher of Thunder'
-            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint sequi atque corrupti sed nam omnis soluta, velit perferendis harum.'
-            onEdit={() => console.log("Edit Card")}
-            onDelete={() => console.log("Delete Card")}
-            type="PSY"
-            minimized={currentBreakpoint === "sm"}
-          />
-          <Card
-            title='Herrscher of Sentience'
-            description='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error aut porro beatae facere maxime, voluptas est ipsum? Repellat tempore amet, magnam vero laudantium dolores impedit tenetur placeat ipsa numquam eveniet!'
-            onEdit={() => console.log("Edit Card")}
-            onDelete={() => console.log("Delete Card")}
-            type="BIO"
-            minimized={currentBreakpoint === "sm"}
-          />
-          <Card
-            title='Stygan Nymph'
-            description='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis harum, ipsa dolorem ab, distinctio amet, rem tempore vel facilis eum numquam id incidunt. Laudantium commodi, qui dolore ipsa molestias, consequuntur reiciendis obcaecati iusto reprehenderit ipsum omnis eligendi possimus est laborum?'
-            onEdit={() => console.log("Edit Card")}
-            onDelete={() => console.log("Delete Card")}
-            type="QUA"
-            minimized={currentBreakpoint === "sm"}
-          />
-          <Card
-            title='Herrscher of Finality'
-            description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam natus unde quia magnam fugiat adipisci cum. Nesciunt alias, aut architecto accusantium quasi sequi, quam inventore eos veniam quo aliquid, adipisci hic nihil. Sunt, veritatis! Iusto atque quae, labore saepe a sapiente doloremque, enim, nulla consequuntur vero aut possimus quas doloribus.'
-            onEdit={() => console.log("Edit Card")}
-            onDelete={() => console.log("Delete Card")}
-            type="IMG"
-            minimized={currentBreakpoint === "sm"}
-          />
+    <BaseTemplate isLoading={isLoading}>
+      <AppContext.Provider value={{
+        currentBreakpoint: currentBreakpoint,
+      }}>
+        <div className="flex flex-col gap-4 py-8">
+          <div className='flex flex-col gap-4 w-[70rem] mx-auto max-w-[95%]'>
+            <h1 className='font-bold text-4xl text-center'>Valkyrie List</h1>
+            <RenderWrapper conditionEmpty={Number(valks?.length) === 0} conditionFail={isError}
+              empty={{
+                title: "Valk data is empty",
+                desc: "You can add more data by clicking the button below"
+              }}
+              fail={{
+                title: "Error while fetching data",
+                desc: "Please try again later" 
+              }}
+            >
+              <div className='flex flex-col gap-4'>
+                {valks?.map((row, index) => (
+                  <Dragndrop key={index} list={row} onMinimizedCardClick={onMinimizedCardClick}/>
+                ))}
+              </div>
+            </RenderWrapper>
+            <AddValk/>
+          </div>
         </div>
-      </div>
-    </div>
+        <BaseModal isVisible={isCardDetailModalVisible} onClose={() => setIsCardDetailModalVisible(false)}>
+          {highlightedValk ?
+            <Card
+              valk={highlightedValk}
+            />
+          :
+            <></>
+          }
+        </BaseModal>
+      </AppContext.Provider>
+    </BaseTemplate>
   );
 }
 

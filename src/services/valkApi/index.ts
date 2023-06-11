@@ -7,12 +7,9 @@ export const valkApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }),
   tagTypes: ["Valks"],
   endpoints: (builder) => ({
-    getValks: builder.query<Valkyrie[][], undefined>({
+    getValks: builder.query<GetValkResponse[], undefined>({
       query: () => "/list",
       providesTags: ["Valks"],
-      transformResponse: (response: GetValkResponse[]) => {
-        return response.map((item) => item.list)
-      }
     }),
     addValk: builder.mutation({
       query: (valk: Omit<Valkyrie, "id">) => ({
@@ -32,8 +29,15 @@ export const valkApi = createApi({
         },
       }),
       invalidatesTags: ["Valks"]
+    }),
+    deleteValkRow: builder.mutation({
+      query: (valkId: string) => ({
+        url: `/list/${valkId}`,
+        method: "DELETE"
+      }),
+      invalidatesTags: ["Valks"]
     })
   })
 })
 
-export const { useGetValksQuery, useAddValkMutation } = valkApi
+export const { useGetValksQuery, useAddValkMutation, useDeleteValkRowMutation } = valkApi

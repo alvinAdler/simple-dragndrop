@@ -22,7 +22,7 @@ function App() {
 
   const { currentBreakpoint } = useBreakpoints()
 
-  const { data: valks, isLoading, isError } = useGetValksQuery(undefined)
+  const { data: valks, isFetching, isError } = useGetValksQuery(undefined)
   const [isCardDetailModalVisible, setIsCardDetailModalVisible] = useState(false)
   const [highlightedValkId, setHighlightedValkId] = useState<string | null>(null)
 
@@ -30,7 +30,7 @@ function App() {
     if(!valks) return undefined
 
     for(let valkRow of valks){
-      for(let valk of valkRow){
+      for(let valk of valkRow.list){
         if(valk.id === highlightedValkId){
           return valk
         }
@@ -46,7 +46,7 @@ function App() {
   }, [])
 
   return (
-    <BaseTemplate isLoading={isLoading}>
+    <BaseTemplate isLoading={isFetching}>
       <AppContext.Provider value={{
         currentBreakpoint: currentBreakpoint,
       }}>
@@ -64,8 +64,8 @@ function App() {
               }}
             >
               <div className='flex flex-col gap-4'>
-                {valks?.map((row, index) => (
-                  <Dragndrop key={index} list={row} onMinimizedCardClick={onMinimizedCardClick}/>
+                {valks?.map((row) => (
+                  <Dragndrop key={row.id} rowId={row.id} list={row.list} onMinimizedCardClick={onMinimizedCardClick}/>
                 ))}
               </div>
             </RenderWrapper>

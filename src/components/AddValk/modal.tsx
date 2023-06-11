@@ -26,7 +26,7 @@ interface AddModalProps{
 
 const AddModal: React.FC<AddModalProps> = ({ data, action, onClose }) => {
 
-  const [addValk, { isLoading, isError }] = useAddValkMutation()
+  const [addValk, { isError, isLoading }] = useAddValkMutation()
   const [currentData, setCurrentData] = useState<ModalData>(data ?? {
     imageUrl: "",
     title: "",
